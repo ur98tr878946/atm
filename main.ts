@@ -8,7 +8,7 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     }
 })
 input.onButtonPressed(Button.A, function () {
-    soundExpression.giggle.playUntilDone()
+    soundExpression.hello.playUntilDone()
     entry = "" + entry + "A"
 })
 input.onButtonPressed(Button.AB, function () {
@@ -18,9 +18,9 @@ input.onButtonPressed(Button.AB, function () {
         basic.showString("validating with your bank ...")
         basic.showIcon(IconNames.Yes)
         basic.showString("your balance is" + MONEY)
-        if (MONEY > 11) {
+        if (MONEY > 1000) {
             basic.showString("taking money")
-            MONEY += -11
+            MONEY += -1000
             basic.showString("take money from flap")
             entry = ""
             for (let index = 0; index < 4; index++) {
@@ -93,13 +93,86 @@ input.onButtonPressed(Button.B, function () {
     soundExpression.hello.playUntilDone()
     entry = "" + entry + "B"
 })
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    soundExpression.hello.playUntilDone()
+    basic.clearScreen()
+    basic.showString("validating with your bank ...")
+    basic.showIcon(IconNames.Yes)
+    basic.showString("your balance is" + MONEY)
+    if (MONEY > 1000) {
+        basic.showString("taking money")
+        MONEY += -1000
+        basic.showString("take money from flap")
+        entry = ""
+        for (let index = 0; index < 4; index++) {
+            basic.showLeds(`
+                . # . # .
+                . . # . .
+                # . . . #
+                . # . # .
+                . . # . .
+                `)
+            basic.showLeds(`
+                . . . . .
+                . # . # .
+                . . # . .
+                # . . . #
+                . # . # .
+                `)
+            basic.showLeds(`
+                . . # . .
+                . . . . .
+                . # . # .
+                . . # . .
+                # . . . #
+                `)
+            basic.showLeds(`
+                . # . # .
+                . . # . .
+                . . . . .
+                . # . # .
+                . . # . .
+                `)
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . . . . .
+                . # . # .
+                `)
+            basic.showLeds(`
+                . . # . .
+                # . . . #
+                . # . # .
+                . . # . .
+                . . . . .
+                `)
+            basic.showLeds(`
+                . # . # .
+                . . # . .
+                # . . . #
+                . # . # .
+                . . # . .
+                `)
+        }
+    } else {
+        basic.showString("not enough")
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
+    }
+})
 let _function = ""
 let entry = ""
 let password = ""
 let MONEY = 0
-basic.showString("V§5")
+basic.showString("v8383")
 music.setVolume(255)
-MONEY = 1111
+MONEY = 10000
 password = "ABAB"
 entry = ""
 _function = "B"
@@ -116,6 +189,9 @@ soundExpression.giggle.playUntilDone()
 soundExpression.mysterious.playUntilDone()
 soundExpression.sad.playUntilDone()
 soundExpression.sad.playUntilDone()
+loops.everyInterval(60000, function () {
+    MONEY += 10000
+})
 basic.forever(function () {
     if (_function == "A") {
         basic.showString("this ATM is closed please call staff" + _function)
@@ -128,7 +204,105 @@ basic.forever(function () {
             `)
     } else {
         basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+        basic.showLeds(`
+            . # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # .
+            `)
+        basic.showLeds(`
+            . . # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # . .
+            `)
+        basic.showLeds(`
+            . . . # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # . . .
+            `)
+        basic.showLeds(`
+            . . . . #
+            # . . . #
+            # . . . #
+            # . . . #
             # . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # . . . #
+            # . . . #
+            # . . . #
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # . . . .
+            # . . . #
+            . . . . #
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            # . . . .
+            . . . . #
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+        basic.showLeds(`
+            . # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # .
+            `)
+        basic.showLeds(`
+            . . # # #
+            . . . . #
+            # . . . #
+            # . . . .
+            # # # . .
+            `)
+        basic.showLeds(`
+            . . . # #
+            . . . . #
+            . . . . .
+            # . . . .
+            # # . . .
+            `)
+        basic.showLeds(`
+            . . . . #
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            `)
+        basic.showLeds(`
+            . . . . .
             . . . . .
             . . . . .
             . . . . .
