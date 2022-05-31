@@ -93,7 +93,7 @@ input.onButtonPressed(Button.B, function () {
     soundExpression.hello.playUntilDone()
     entry = "" + entry + "B"
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     soundExpression.hello.playUntilDone()
     basic.clearScreen()
     basic.showString("validating with your bank ...")
@@ -166,6 +166,9 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
             `)
     }
 })
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+	
+})
 let _function = ""
 let entry = ""
 let password = ""
@@ -177,6 +180,7 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
+led.setBrightness(78)
 basic.showLeds(`
     . . . . #
     . . . . .
@@ -184,6 +188,7 @@ basic.showLeds(`
     . . . . .
     # . . . .
     `)
+led.setBrightness(105)
 basic.showLeds(`
     . . . # #
     . . . . #
@@ -191,6 +196,7 @@ basic.showLeds(`
     # . . . .
     # # . . .
     `)
+led.setBrightness(115)
 basic.showLeds(`
     . . # # #
     . . . . #
@@ -198,6 +204,7 @@ basic.showLeds(`
     # . . . .
     # # # . .
     `)
+led.setBrightness(128)
 basic.showLeds(`
     . # # # #
     # . . . #
@@ -205,6 +212,7 @@ basic.showLeds(`
     # . . . #
     # # # # .
     `)
+led.setBrightness(132)
 basic.showLeds(`
     # # # # #
     # . . . #
@@ -212,6 +220,7 @@ basic.showLeds(`
     # . . . #
     # # # # #
     `)
+led.setBrightness(156)
 basic.showLeds(`
     # # # # #
     # # . . #
@@ -219,6 +228,7 @@ basic.showLeds(`
     # . . # #
     # # # # #
     `)
+led.setBrightness(169)
 basic.showLeds(`
     # # # # #
     # # . . #
@@ -226,6 +236,7 @@ basic.showLeds(`
     # . . # #
     # # # # #
     `)
+led.setBrightness(185)
 basic.showLeds(`
     # # # # #
     # # . # #
@@ -233,6 +244,7 @@ basic.showLeds(`
     # # . # #
     # # # # #
     `)
+led.setBrightness(197)
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -240,6 +252,7 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
+led.setBrightness(214)
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -247,6 +260,7 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
+led.setBrightness(255)
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -254,6 +268,7 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
+led.setBrightness(214)
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -261,6 +276,7 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
+led.setBrightness(197)
 basic.showLeds(`
     # # # # #
     # # # # #
@@ -268,6 +284,7 @@ basic.showLeds(`
     # # # # #
     # # # # #
     `)
+led.setBrightness(185)
 basic.showLeds(`
     # # # # #
     # # # . #
@@ -275,6 +292,7 @@ basic.showLeds(`
     # . # # #
     # # # # #
     `)
+led.setBrightness(169)
 basic.showLeds(`
     # # # # #
     # # # . #
@@ -282,6 +300,7 @@ basic.showLeds(`
     # . # # #
     # # # # #
     `)
+led.setBrightness(156)
 basic.showLeds(`
     # # # # #
     # # . . #
@@ -289,6 +308,7 @@ basic.showLeds(`
     # . . # #
     # # # # #
     `)
+led.setBrightness(128)
 basic.showLeds(`
     # # # # #
     # . . . #
@@ -296,6 +316,7 @@ basic.showLeds(`
     # . . . #
     # # # # #
     `)
+led.setBrightness(115)
 basic.showLeds(`
     # # # # #
     . . . . #
@@ -303,6 +324,7 @@ basic.showLeds(`
     # . . . .
     # # # # #
     `)
+led.setBrightness(105)
 basic.showLeds(`
     . # # # #
     . . . . #
@@ -310,6 +332,7 @@ basic.showLeds(`
     # . . . .
     # # # # .
     `)
+led.setBrightness(78)
 basic.showLeds(`
     . . # # #
     . . . . #
@@ -317,6 +340,7 @@ basic.showLeds(`
     # . . . .
     # # # . .
     `)
+led.setBrightness(68)
 basic.showLeds(`
     . . . # #
     . . . . #
@@ -324,6 +348,7 @@ basic.showLeds(`
     # . . . .
     # # . . .
     `)
+led.setBrightness(58)
 basic.showLeds(`
     . . . . #
     . . . . #
@@ -331,6 +356,7 @@ basic.showLeds(`
     # . . . .
     # . . . .
     `)
+led.setBrightness(49)
 basic.showLeds(`
     . . . . .
     . . . . #
@@ -338,6 +364,7 @@ basic.showLeds(`
     # . . . .
     . . . . .
     `)
+led.setBrightness(39)
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -345,6 +372,7 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
+led.setBrightness(255)
 basic.showLeds(`
     . . . . .
     . . . . .
