@@ -170,14 +170,196 @@ let _function = ""
 let entry = ""
 let password = ""
 let MONEY = 0
-basic.showString("v8383")
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . #
+    . . . . .
+    . . . . .
+    . . . . .
+    # . . . .
+    `)
+basic.showLeds(`
+    . . . # #
+    . . . . #
+    . . . . .
+    # . . . .
+    # # . . .
+    `)
+basic.showLeds(`
+    . . # # #
+    . . . . #
+    # . . . #
+    # . . . .
+    # # # . .
+    `)
+basic.showLeds(`
+    . # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # .
+    `)
+basic.showLeds(`
+    # # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # . . #
+    # . . . #
+    # . . # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # . . #
+    # # . # #
+    # . . # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # . # #
+    # # . # #
+    # # . # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # . # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # . # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # . . . #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # . #
+    # . . . #
+    # . # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # . #
+    # . . . #
+    # . # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # . . #
+    # . . . #
+    # . . # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    . . . . #
+    # . . . #
+    # . . . .
+    # # # # #
+    `)
+basic.showLeds(`
+    . # # # #
+    . . . . #
+    # . . . #
+    # . . . .
+    # # # # .
+    `)
+basic.showLeds(`
+    . . # # #
+    . . . . #
+    # . . . #
+    # . . . .
+    # # # . .
+    `)
+basic.showLeds(`
+    . . . # #
+    . . . . #
+    # . . . #
+    # . . . .
+    # # . . .
+    `)
+basic.showLeds(`
+    . . . . #
+    . . . . #
+    # . . . #
+    # . . . .
+    # . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . #
+    # . . . #
+    # . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    # . . . #
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showString("v.95.0")
 music.setVolume(255)
 MONEY = 10000
 password = "ABAB"
 entry = ""
 _function = "B"
 basic.showString("Hello!")
-basic.showArrow(ArrowNames.North)
+basic.showArrow(ArrowNames.SouthWest)
 soundExpression.hello.playUntilDone()
 soundExpression.happy.playUntilDone()
 soundExpression.giggle.playUntilDone()
@@ -308,5 +490,10 @@ basic.forever(function () {
             . . . . .
             . . . . .
             `)
+    }
+})
+loops.everyInterval(30000, function () {
+    if (MONEY == 0) {
+        game.gameOver()
     }
 })
